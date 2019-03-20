@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]><html lang="en" class="no-js ie8"><![endif]-->
+<!--[if IE 9]><html lang="en" class="no-js ie9"><![endif]-->
+<!--[if !IE]>-->
+<html style="margin-top: 0!important;" lang="en-US">
+<!--<![endif]-->
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="Sherpur Industrial Park" />
+    <!--    <meta name="robots" content="index,follow" />-->
+    <meta name="keywords" content="Sherpur, Industrial Park, Warehousing space" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
+    <link type="text/css" media="all" href="Assets/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <link rel="apple-touch-icon" sizes="76x76" href="/Assets/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/Assets/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/Assets/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/Assets/images/favicon/site.webmanifest">
+<link rel="mask-icon" href="/Assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/Assets/images/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/Assets/images/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+    <title>Sherpur Industrial park</title>
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w, d, s, l, i) {
+            w[l] = w[l] || [];
+            w[l].push({
+                'gtm.start': new Date().getTime(),
+                event: 'gtm.js'
+            });
+            var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s),
+                dl = l != 'dataLayer' ? '&l=' + l : '';
+            j.async = true;
+            j.src =
+                'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
+            f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-55JJ7S6');
+
+    </script>
+    <!-- End Google Tag Manager -->
+
+    <script type='text/javascript' src='Assets/js/jquery.js'></script>
+      <!-- Firebase App is always required and must be first -->
+    <script src="/__/firebase/5.5.9/firebase-app.js"></script>
+    <script src="/__/firebase/5.5.9/firebase-database.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    
+    <style>
+ .plot_description .table-fill {
+  text-rendering: optimizeLegibility;
+  font-size: 16px;
+  font-weight: 400;
+  background: grey;
+  border-radius:3px;
+  border-collapse: collapse;
+  height: auto;
+  margin: 10px auto;
+  max-width: 500px;
+  padding:5px;
+  width: 100%;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  animation: float 5s infinite;
+}
+ 
+.plot_description .table-fill th {
+  color:#D5DDE5;
+  background:#1b1e24;
+  border-bottom:4px solid #9ea7af;
+  border-right: 1px solid #343a45;
+  font-size:23px;
+  font-weight: 100;
+  padding:16px;
+  text-align:left;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  vertical-align:middle;
+}
+
+.plot_description .table-fill th:first-child {
+  border-top-left-radius:3px;
+}
+ 
+.plot_description .table-fill th:last-child {
+  border-top-right-radius:3px;
+  border-right:none;
+}
+  
+.plot_description .table-fill tr {
+  border-top: 1px solid #C1C3D1;
+  border-bottom: 1px solid #C1C3D1;
+  color:#666B85;
+  font-size:16px;
+  font-weight:normal;
+  text-shadow: 0 1px 1px rgba(256, 256, 256, 0.1);
+}
+ 
+.plot_description .table-fill tr:hover td {
+  background:#4E5066;
+  color:#FFFFFF;
+  border-top: 1px solid #22262e;
+}
+ 
+.plot_description .table-fill tr:first-child {
+  border-top:none;
+}
+
+.plot_description .table-fill tr:last-child {
+  border-bottom:none;
+}
+ 
+.plot_description .table-fill tr:nth-child(odd) td {
+  background:#EBEBEB;
+}
+ 
+.plot_description .table-fill tr:nth-child(odd):hover td {
+  background:#4E5066;
+}
+
+.plot_description .table-fill tr:last-child td:first-child {
+  border-bottom-left-radius:3px;
+}
+ 
+.plot_description .table-fill tr:last-child td:last-child {
+  border-bottom-right-radius:3px;
+}
+ 
+.plot_description .table-fill td {
+  background:#FFFFFF;
+  padding:14px;
+  text-align:left;
+  vertical-align:middle;
+  font-weight:300;
+  font-size:18px;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.1);
+  border-right: 1px solid #C1C3D1;
+}
+
+.plot_description .table-fill td:last-child {
+  border-right: 0px;
+}
+
+.plot_description .table-fill th.text-left {
+  text-align: left;
+}
+
+.plot_description .table-fill th.text-center {
+  text-align: center;
+}
+
+.plot_description .table-fill th.text-right {
+  text-align: right;
+}
+
+.plot_description .table-fill td.text-left {
+  text-align: left;
+}
+
+.plot_description .table-fill td.text-center {
+  text-align: center;
+}
+
+.plot_description .table-fill td.text-right {
+  text-align: right;
+}
+        .plots_Sub_heading{
+            margin-top: 10px;
+        }
+        .plots_Sub_headind9{
+            font-size: 25px;
+            font-weight: 500;
+            margin-bottom: 5px;
+        }
+        
+        @media(max-width:576){
+            .plot_description{
+                padding: 4px;
+            }
+        }
+    
+    </style>
+
+</head>
+
+<body data-menu="closed" data-delay="false" class="page-template page page-id-116 header-secondary">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55JJ7S6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+   
+       <!-- Enquiry form -->
+    <div class="lightbox-wrapper" data-lightbox='closed'>
+        <div class="lightbox-cell">
+            <div class="lightbox-container">
+                <div class="lightbox-content">
+                    <div class="close"> <span></span> <span></span></div>
+                    <div id="hide">
+                    <h2>Hurry<br/><span class="light">Up</span></h2>
+                    <p> The road is getting wider by 30ft </p>
+                    <p>Book your Land now or else price will be rising soon</p>
+                    </div>
+                    <div>
+                        <div class="form-fields">
+                            <form class="form-container" id="eventform" onsubmit="event.preventDefault(); validateMyForm();">
+                                <div class="form-group">
+                                    <input type="text" id="Fname" name="billing_name" class="form-control" aria-required="true" placeholder="First Name*">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="billing_email" class="form-control" id="E_Email" aria-required="true" placeholder="Your Email*">
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" name="billing_tel" id="E_tele" class="form-control" aria-required="true" placeholder="Phone Number*">
+                                </div>
+                                <div class="form-group"> <i class="arrow-icon"></i>
+                                    <select name="amount" class="form-control select-box-lightbox" id="budget">
+                                        <option value="" disabled selected>Budget </option>
+                                        <option value="15 Lakhs">15 Lacs</option>
+                                        <option value="30-50 lakhs">30-50 Lakhs</option>
+                                        <option value="50-70 Lakhs">51-70 Lakhs</option>
+                                        <option value="71-90 Lakhs">71-99 Lakhs</option>
+                                        <option value="1-2 Cr">1-2 Cr</option>
+                                        <option value="2-3 Cr">2-3 Cr</option>
+                                        <option value="More than 3 Cr">More than 3 Cr</option>
+                                       
+                                    </select>
+                                </div>
+                                <div class="form-group" > 
+                                   <i class="arrow-icon"></i>
+                                    <select name="merchant_param1" class="form-control select-box-lightbox" id="products">
+                                        <option value="" disabled selected>Product*</option>
+                                        <option value="Industrial Land">Industrial Land</option>
+                                        <option value="Logistics Hub">Logistics Hub</option>
+                                        <option value="Warehouse">Warehouse</option>
+                                    </select>
+                                </div>
+                               
+                                <button class="button submit">Send</button>
+                            </form>
+                            <div class="thank_message" id="thank_msg">
+                                <h2>Thank you for requesting</h2>
+                                <p> we will reach you out shortly</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+   
+   <!-- Enquiry form closed -->
+   
+   
+   
+   
+    <div class="nav table">
+        <div class="cell">
+            <div class="nav-button">
+                <div class="dot dot-1"></div>
+                <div class="dot dot-2"></div>
+                <div class="dot dot-3"></div>
+                <div class="dot dot-4"></div>
+                <div class="dot dot-5"></div>
+                <div class="dot dot-6"></div>
+                <div class="dot dot-7"></div>
+                <div class="dot dot-8"></div>
+                <div class="dot dot-9"></div>
+            </div>
+        </div>
+         <div class="cell">
+            <div class="lang-switcher"> 
+             <a class="open-lightbox">Enquiry</a>
+            </div>
+        </div>
+    </div>
+    <div class="menu-items-wrapper">
+        <ul>
+            <div class="menu-main-menu-container">
+                <ul id="menu-main-menu" class="menu">
+                    <li id="menu-item-178" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home page-item-5 current_page_item menu-item-178"><a href="index.html">Home</a></li>
+
+                    <li id="menu-item-176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176 current-menu-item page_item"><a href="project_plan.html">Project Plan</a></li>
+                    <li id="menu-item-175" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-175"><a href="feature.html">Features</a></li>
+                    <li id="menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333"><a href="why_us.html">WHY SIP</a></li>
+                    <li id="menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333"><a href="whyBengal.html">Why Bengal</a></li>
+                    <li id="menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333"><a href="about.html">About us</a></li>
+                    <li id="menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333"><a href="locate.html"> Locate us</a></li>
+                    <li id="menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333"><a href="gallery.html">Gallery</a></li>
+                    <li id="menu-item-208" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-208"><a href="logistic.html">Logistic Hub </a></li>
+                    <!--                      <li id="menu-item-177" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-177"><a href="./warehousing.html">Warehousing & Logistics</a></li>-->
+                </ul>
+            </div>
+        </ul>
+    </div>
+    <section class="section-scrollbar" data-scrollbar>
+        <div id="header" class="container" style="background-image: url('./Assets/images/about.jpg');">
+            <div class="overlay-opacity"></div>
+            <h2>Project <br> <span class="light"> Plan </span></h2>
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="Assets/images/logo%20samll%20(1).png" alt="logo" height="120px">
+                </div>
+            </div>
+        </div>
+        <div class="main-layout">
+            <div class="container">
+                <div class="tiles">
+
+                    <div class="tile">
+                        <img src="Assets/images/map.png" alt="project_plan" width="100%" height="120%">
+
+                    </div>
+                </div>
+                
+
+                    <div class="plot_description">
+                        <h1 class="plots_heading"></h1>
+                                 
+                            <div class="text">
+                            <div class="holder">
+                                <h2> Plots & Built-to-suit <span class="light">at a strategisc address </span></h2>
+                                <p style="text-align:justify">The park offers numerous site development options, keeping in mind the varied requirements of businesses. The SIP Team offers expertise to construct the facility in record time
+                                </p>
+                            </div>
+                        </div>
+                        
+                       
+
+                        
+
+                        <table class="table-fill">
+                            <thead>
+                                <tr>
+                                    <th class="text-left">Plots details</th>
+                                    <th class="text-left">Dimension</th>
+                                </tr>
+                            </thead>
+                            <tbody class="table-hover">
+                                <tr>
+                                    <td class="text-left">Small & Medium Units</td>
+                                    <td class="text-left">	1 - 5 acres</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">Large Units</td>
+                                    <td class="text-left">10 acres and above</td>
+                                </tr>
+                                <tr>
+                                    <td class="text-left">Tiny Units</td>
+                                    <td class="text-left">	0.33 Acre</td>
+                                </tr>
+                               
+                            </tbody>
+                        </table>
+                        
+                        
+
+                    
+                    <h6 class="plots_Sub_headind9"> Tiny Units Cluster</h6>
+                    <p> A key component of the integrated structure of SIP, this cluster of tiny units will service the outsourcing requirements of larger units. While the Tiny Units will benefit from the constant availability of business opportunities, Larger Units will gain from the proximity and reliability of the cluster.</p>
+                </div>
+
+</div>
+            </div>
+      
+
+
+ <footer id="footer">
+            <div class="container">
+                <div class="holder">
+                    <div class="table">
+                        <div class="cell">
+                             <h4>Location</h4>
+                            <p>Amta Road, Uluberia - Amta Rd</p>
+                            <p> West Bengal 711401</p>
+                        </div>
+                        <div class="cell">
+                            <h4>Contact</h4> 
+                            <a href="tel:+9198364 62566">98364 62566 </a>
+                            <a href="mailto:info@sherpurinduspark.com">Info@sherpurinduspark.com </a>
+                            </div>
+                            
+                        <div class="cell">
+                            <h4>Links</h4> 
+                            <a href="why_us.html">• WHY SIP</a> 
+                            <a href="#">• Privacy Policy</a> 
+                            <a class="open-lightbox">• Enquiry</a>
+                            </div>
+                        <div class="cell">
+                            <h4>Newsletter</h4>
+                            <div class="newsletter-form">
+                                <div role="form" class="wpcf7" dir="ltr">
+                                    <div class="screen-reader-response"></div>
+                                    
+                                    <form id="Newsletter_form" onsubmit="event.preventDefault(); validateMyFormNewsLetter()";>
+    
+                                    
+                                            <input type="email" name="newsletter" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Your Email" id="email_news" /> 
+                                            
+                                            <p>
+                                                <button type="submit"><i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                                </button>
+                                               
+                                        </p>
+                                        
+                                    </form>
+                                    <p class="News_ltr_msg" id="News_ltr_msg_thank"> 
+                                    Thank you, you'll receive an email soon
+                                   </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="holder">
+                    <div class="table">
+                        <div class="cell">
+                        </div>
+                        <div class="cell">
+                            <div class="copyright">&copy; 2018 SIP | All Rights Reserved | <span class="dxb"><a href="https://www.resto-g.com/" target=_blank>Made By Resto-G</a></span></div>
+                        </div>
+                        <div class="cell">
+                            <div class="social"> 
+                            <a href="https://www.facebook.com/Sherpur-Industrial-park-272919176695087/" rel="nofollow">
+                            <i class="fa fa-facebook" ></i>
+                            </a> 
+                            <a href="https://twitter.com/ParkIndus" rel="nofollow"><i class="fa fa-twitter" ></i>
+                            </a> 
+                            <a href="https://www.instagram.com/sherpurindus/" rel="nofollow"><i class="fa fa-instagram" ></i></a> 
+                            <a href="https://www.linkedin.com/company/sherpur-industrial-park" rel="nofollow">
+                            <i class="fa fa-linkedin" ></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <script type="text/javascript" defer src="Assets/js/script.js"></script>
+ <script type="text/javascript" src="Assets/js/backend.js"></script>
+
+</body>
+
+</html>

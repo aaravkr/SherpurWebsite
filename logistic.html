@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]><html lang="en" class="no-js ie8"><![endif]-->
+<!--[if IE 9]><html lang="en" class="no-js ie9"><![endif]-->
+<!--[if !IE]>-->
+<html style="margin-top: 0!important;" lang="en-US">
+<!--<![endif]-->
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="Sherpur Industrial Park" />
+    <!--    <meta name="robots" content="index,follow" />-->
+    <meta name="keywords" content="Sherpur, Industrial Park, Warehousing space" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
+    <link type="text/css" media="all" href="Assets/css/style.css" rel="stylesheet" />
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+      
+<link rel="apple-touch-icon" sizes="76x76" href="/Assets/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/Assets/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/Assets/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/Assets/images/favicon/site.webmanifest">
+<link rel="mask-icon" href="/Assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/Assets/images/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/Assets/images/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+    <title>Sherpur Industrial park</title>
+
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-55JJ7S6');</script>
+<!-- End Google Tag Manager -->
+
+    <script type='text/javascript' src='Assets/js/jquery.js'></script>
+    
+      <!-- Firebase App is always required and must be first -->
+    <script src="/__/firebase/5.5.9/firebase-app.js"></script>
+    <script src="/__/firebase/5.5.9/firebase-database.js"></script>
+    <script src="/__/firebase/init.js"></script>
+<style>
+    .bg{
+        background-size: 500px;
+    }
+    </style>
+
+</head>
+
+<body data-menu="closed" data-delay="false" class="page-template page page-id-116 header-secondary">
+    
+   <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55JJ7S6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+    
+       <!-- Enquiry form -->
+    <div class="lightbox-wrapper" data-lightbox='closed'>
+        <div class="lightbox-cell">
+            <div class="lightbox-container">
+                <div class="lightbox-content">
+                    <div class="close"> <span></span> <span></span></div>
+                    <div id="hide">
+                    <h2>Hurry<br/><span class="light">Up</span></h2>
+                    <p> The road is getting wider by 30ft </p>
+                    <p>Book your Land now or else price will be rising soon</p>
+                    </div>
+                    <div>
+                        <div class="form-fields">
+                            <form class="form-container" id="eventform" onsubmit="event.preventDefault(); validateMyForm();">
+                                <div class="form-group">
+                                    <input type="text" id="Fname" name="billing_name" class="form-control" aria-required="true" placeholder="First Name*">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="billing_email" class="form-control" id="E_Email" aria-required="true" placeholder="Your Email*">
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" name="billing_tel" id="E_tele" class="form-control" aria-required="true" placeholder="Phone Number*">
+                                </div>
+                                <div class="form-group"> <i class="arrow-icon"></i>
+                                    <select name="amount" class="form-control select-box-lightbox" id="budget">
+                                        <option value="" disabled selected>Budget </option>
+                                        <option value="15 Lakhs">15 Lacs</option>
+                                        <option value="30-50 lakhs">30-50 Lakhs</option>
+                                        <option value="50-70 Lakhs">51-70 Lakhs</option>
+                                        <option value="71-90 Lakhs">71-99 Lakhs</option>
+                                        <option value="1-2 Cr">1-2 Cr</option>
+                                        <option value="2-3 Cr">2-3 Cr</option>
+                                        <option value="More than 3 Cr">More than 3 Cr</option>
+                                       
+                                    </select>
+                                </div>
+                                <div class="form-group" > 
+                                   <i class="arrow-icon"></i>
+                                    <select name="merchant_param1" class="form-control select-box-lightbox" id="products">
+                                        <option value="" disabled selected>Product*</option>
+                                        <option value="Industrial Land">Industrial Land</option>
+                                        <option value="Logistics Hub">Logistics Hub</option>
+                                        <option value="Warehouse">Warehouse</option>
+                                    </select>
+                                </div>
+                               
+                                <button class="button submit">Send</button>
+                            </form>
+                            <div class="thank_message" id="thank_msg">
+                                <h2>Thank you for requesting</h2>
+                                <p> we will reach you out shortly</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+   
+   <!-- Enquiry form closed -->
+
+    <div class="nav table">
+        <div class="cell">
+            <div class="nav-button">
+                <div class="dot dot-1"></div>
+                <div class="dot dot-2"></div>
+                <div class="dot dot-3"></div>
+                <div class="dot dot-4"></div>
+                <div class="dot dot-5"></div>
+                <div class="dot dot-6"></div>
+                <div class="dot dot-7"></div>
+                <div class="dot dot-8"></div>
+                <div class="dot dot-9"></div>
+            </div>
+        </div>
+        <div class="cell">
+            <div class="lang-switcher"> 
+             <a class="open-lightbox">Enquiry</a>
+            </div>
+        </div>
+    </div>
+   <div class="menu-items-wrapper">
+        <ul>
+             <div class="menu-main-menu-container">
+                <ul id="menu-main-menu" class="menu">
+                    <li id="menu-item-178" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-5 current_page_item menu-item-178"><a href="index.html">Home</a></li>
+                  
+                    <li id="menu-item-176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176"><a href="project_plan.html">Project Plan</a></li>
+                    <li id="menu-item-175" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-175"><a href="feature.html">Features</a></li>
+                    <li id="menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333"><a href="why_us.html">WHY SIP</a></li>
+                    <li id="menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333"><a href="whyBengal.html">Why Bengal</a></li>
+                     <li id="menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333"><a href="about.html">About us</a></li>
+                      <li id="menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333"><a href="locate.html"> Locate us</a></li>
+                       <li id="menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333"><a href="gallery.html">Gallery</a></li>
+                    <li id="menu-item-208" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-208"><a href="logistic.html">Logistic Hub </a></li>
+<!--                      <li id="menu-item-177" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-177"><a href="./warehousing.html">Warehousing & Logistics</a></li>-->
+                </ul>
+            </div>
+        </ul>
+    </div>
+    <section class="section-scrollbar" data-scrollbar>
+        <div id="header" class="container" style="background-image: url('./Assets/images/warehousing2.jpg');">
+            <div class="overlay-opacity"></div>
+            <h2>Logistics <br> <span class="light">Hub</span></h2>
+            <div class="logo-container">
+                <div class="logo">
+                    <img src="Assets/images/logo%20samll%20(1).png" alt="logo" height="120px">
+                </div>
+            </div>
+        </div>
+        <div class="main-layout">
+            <div class="container">
+                <div class="tiles">
+                    <div class="tile">
+                        <div class="text">
+                            <div class="holder">
+                                <h2>Logistic <br> <span class="light">Hub </span></h2>
+                                <p style="text-align:justify">Logistics Hub is concentrated in the areas of logistics operations, in the convergence of several modes of transport, there will be a variety of different types of logistics facilities and logistics enterprise in space focused on the layout of places, but also a certain scale and have a variety of services function of logistics enterprises in the assembly points.
+                                <br><br>
+                                At Sherpur Industrial Park, we are giving an oppurtinity to open a Logistic hub with built-to-suit facility.
+                                The Logistic Park aimed at facilitating the domestic and foreign trade, providing services like warehousing, cold storage, multi modal transport facilities, transportation, freight forwarding,Inland Container Depots(ICDs)/ Container Freight Stations(CFSs) and other value added services. 
+                                </p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="holder">
+                                <div class="image" data-parallax='0.3' style="background-image: url('./Assets/images/warehousing.jpg');"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tile">
+                        <div class="text">
+                            <div class="holder">
+                                <h2>Why Bengal <br> <span class="light">An Opportunity </span></h2>
+                                <p style="text-align:justify">WEST BENGAL: THE STATE OF SUPREMELY EFFICIENT LOGISTICS SOLUTIONS
+                                    <br>
+                                    <br> 
+                                    Bengal Leading the charge along the growth curve of India. West Bengal has come a long way from being a provider of transport services to a facilitator of integrated logistic services. Logistics sector market in the state of West Bengal is expected to <strong>GROW</strong> at the rate of least 9 to 10 percent over the next few years.
+                                    <br>
+                                    <br>Bengal’s geographical location makes it an important global hub for trade and logistics, linking growth markets across Nepal, Bhutan, Bangladesh and South Eastern Asian countries, to the rest of the world. Due to its arterial trade routes that link mainland of India with North-Eastern states and its proximity to other major cities, makes Bengal an Efficient Logistics Solution.
+                                    <br><br>
+                                    State GDP growing at a 15.5%(2016-17) at a pace much ahead of India
+                                </p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="holder">
+                                <div class="image bg" data-parallax='0.3' style="background-image: url('./Assets/images/bengal3.jpg');"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                 <div class="tile">
+                        <div class="text">
+                            <div class="holder">
+                                <h2>Bengal <br> <span class="light">Initiative</span></h2>
+                                <p style="text-align:justify">
+                                   The Government of West Bengal(GoWB) has a launched a policy aiming to build a vibrant logistics infrastructure within the state with a special focus on developing Logistics Park(s)/(LPs) either directly by government or by encouraging private participation or by entering Public Private Partnerships(PPP). 
+                                    <br>
+                                    <br>
+                                    
+                                    
+                                </p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="holder">
+                                <div class="image bg" data-parallax='0.3' style="background-image: url(./Assets/images/logistic4.jpg);"></div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="tile">
+                        <div class="text">
+                            <div class="holder">
+                                <h2>Incentives <br> <span class="light">& Benefits</span></h2>
+                                <p style="text-align:justify">
+                                   Government of West Bengal, on recommendations of West Bengal Logistic Park Committee (WBLPC) may provide various kinds of Fiscal and Non Fiscal incentives which it may feel necessary to encourage the sector of Logistics in the state. However, detailed promises would be made in consultations with the WBLPC in due course of the time.
+                                   
+                                </p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="holder">
+                                <div class="image" data-parallax='0.3' style="background-image: url(./Assets/images/logistic5.jpg);"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                      <div class="tile">
+                        <div class="text">
+                            <div class="holder">
+                                <h2>Why build Logistic Hub<br> <span class="light"> in Sherpur</span></h2>
+                                <p style="text-align:justify">
+                                 Sherpur Industrial Park is designed for efficient and cost effective operations. Strategically situated in West Bengal, it is well connected with eastern corridor and paves way to all the neighbouring countries.  Our park is master planned with modern facilities like 24x7 Security and other amenities.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="holder">
+                                <div class="image" data-parallax='0.3' style="background-image: url(./Assets/images/logistic6.jpg);"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+ <footer id="footer">
+            <div class="container">
+                <div class="holder">
+                    <div class="table">
+                        <div class="cell">
+                             <h4>Location</h4>
+                            <p>Amta Road, Uluberia - Amta Rd</p>
+                            <p> West Bengal 711401</p>
+                        </div>
+                        <div class="cell">
+                            <h4>Contact</h4> 
+                            <a href="tel:+9198364 62566">98364 62566 </a>
+                            <a href="mailto:info@sherpurinduspark.com">Info@sherpurinduspark.com </a>
+                            </div>
+                            
+                        <div class="cell">
+                            <h4>Links</h4> 
+                            <a href="why_us.html">• WHY SIP</a> 
+                            <a href="#">• Privacy Policy</a> 
+                            <a class="open-lightbox">• Enquiry</a>
+                            </div>
+                        <div class="cell">
+                            <h4>Newsletter</h4>
+                            <div class="newsletter-form">
+                                <div role="form" class="wpcf7" dir="ltr">
+                                    <div class="screen-reader-response"></div>
+                                    
+                                    <form id="Newsletter_form" onsubmit="event.preventDefault(); validateMyFormNewsLetter()";>
+    
+                                    
+                                            <input type="email" name="newsletter" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Your Email" id="email_news" /> 
+                                            
+                                            <p>
+                                                <button type="submit"><i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                                </button>
+                                               
+                                        </p>
+                                        
+                                    </form>
+                                    <p class="News_ltr_msg" id="News_ltr_msg_thank"> 
+                                    Thank you, you'll receive an email soon
+                                   </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="holder">
+                    <div class="table">
+                        <div class="cell">
+                        </div>
+                        <div class="cell">
+                            <div class="copyright">&copy; 2018 SIP | All Rights Reserved | <span class="dxb"><a href="https://www.resto-g.com/" target=_blank>Made By Resto-G</a></span></div>
+                        </div>
+                        <div class="cell">
+                            <div class="social"> 
+                            <a href="https://www.facebook.com/Sherpur-Industrial-park-272919176695087/" rel="nofollow">
+                            <i class="fa fa-facebook" ></i>
+                            </a> 
+                            <a href="https://twitter.com/ParkIndus" rel="nofollow"><i class="fa fa-twitter" ></i>
+                            </a> 
+                            <a href="https://www.instagram.com/sherpurindus/" rel="nofollow"><i class="fa fa-instagram" ></i></a> 
+                            <a href="https://www.linkedin.com/company/sherpur-industrial-park" rel="nofollow">
+                            <i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+
+    <script type="text/javascript" defer src="Assets/js/script.js"></script>
+    <script type="text/javascript" src="Assets/js/backend.js"></script>
+
+</body>
+</html>

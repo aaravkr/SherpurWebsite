@@ -1,0 +1,19 @@
+{
+  /* Visit https://firebase.google.com/docs/database/security to learn more about security rules. */
+  
+  "rules": {
+    "Enquiry": {
+        ".read": "auth.uid != null",
+          ".write": true  
+    },
+     "contact": {
+        ".read": "auth.uid != null",
+          ".write": true  
+    },
+     "NewsLetter": {
+        ".read": "auth.uid != null",
+          ".write": true  
+    }
+  }
+
+}

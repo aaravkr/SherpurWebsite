@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]><html lang="en" class="no-js ie8"><![endif]-->
+<!--[if IE 9]><html lang="en" class="no-js ie9"><![endif]-->
+<!--[if !IE]>-->
+<html style="margin-top: 0!important;" lang="en-US">
+<!--<![endif]-->
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+
+    
+
+
+
+   
+    <script type='text/javascript' src='Assets/js/jquery.js'></script>
+    <!--<script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>-->
+
+    <!--
+     Firebase App is always required and must be first 
+    <script src="/__/firebase/5.5.9/firebase-app.js"></script>
+    <script src="/__/firebase/5.5.9/firebase-database.js"></script>
+    <script src="/__/firebase/init.js"></script>
+-->
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.7.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyA3dmkhNqTl7bOoTzvlGoivXQFDzg3lVgw",
+            authDomain: "sherpur-e60c7.firebaseapp.com",
+            databaseURL: "https://sherpur-e60c7.firebaseio.com",
+            projectId: "sherpur-e60c7",
+            storageBucket: "sherpur-e60c7.appspot.com",
+            messagingSenderId: "485574384620"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <style>
+        form {
+            border: 3px dashed #f1f1f1;
+            width: 50%;
+        }
+
+        input[type=email],
+        input[type=password] {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            display: inline-block;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        button:hover {
+            opacity: 0.8;
+        }
+
+
+
+        .imgcontainer {
+            text-align: center;
+            margin: 24px 0 12px 0;
+        }
+
+
+        .container {
+            padding: 16px;
+        }
+
+        .middle {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+    </style>
+
+</head>
+
+<body data-menu="closed" data-delay="false" class="home page-template-default page page-id-5">
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55JJ7S6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+
+    <div class="middle">
+        <form id="eventform" onsubmit="event.preventDefault(); validateMyForm();">
+            <div class="imgcontainer">
+                <h2> Admin form</h2>
+            </div>
+
+            <div class="container">
+               <div id="logOutDisplay" >
+                <label for="username"><b>Username</b></label>
+                <input type="email" placeholder="Enter Username" name="username" id="usermail" required>
+
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" id="userpass" required>
+
+                <button type="submit" id="sign_in_email">Login</button>
+                </div>
+                <button type="click" id="sign_out">Logout</button>
+
+            </div>
+
+
+        </form>
+    </div>
+
+    <script>
+        function validateMyForm() {
+            var username = document.getElementById('usermail').value;
+            var userpass = document.getElementById('userpass').value;
+            console.log(`user name is ${username} and password is ${usermail}`);
+
+
+            // Firebase AUTH
+
+            firebase.auth().signInWithEmailAndPassword(username, userpass)
+                .then(function(data) {
+                      document.getElementById('usermail').style.display = "none";
+                      document.getElementById('userpass').style.display = "none";  
+                    })
+                    .catch(function(error) {
+                        // Handle Errors here.
+                        var errorCode = error.code;
+                        var errorMessage = error.message;
+
+                        if (errorCode === 'auth/wrong-password') {
+                            alert('Wrong password.');
+                        } else {
+                            alert(errorMessage);
+                        }
+                        console.log(error);
+                    });
+
+                }
+
+
+            firebase.auth().onAuthStateChanged(function(user) {
+                var signInButton = document.getElementById('sign_in_email');
+                var button_sign_out = document.getElementById('sign_out');
+                
+                if (user) {
+                    console.log(user);
+                     document.getElementById('logOutDisplay').style.display = "none";
+                    signInButton.style.display = 'none';
+                    button_sign_out.style.display = 'block';
+                    var email = user.email;
+
+                window.location.href = "/abcdefghij.html";
+
+                } else {
+                    console.log('no user')
+                    button_sign_out.style.display = 'none';
+                     document.getElementById('logOutDisplay').style.display = "block";
+
+                }
+            });
+
+
+            var button_sign_out = document.getElementById('sign_out');
+            button_sign_out.addEventListener('click', signOut);
+
+            function signOut() {
+                firebase.auth().signOut().then(function() {
+                    // Sign-out successful.
+                }).catch(function(error) {
+                    // An error happened.
+                });
+            }
+    </script>
+</body>
+</html>
+      
+       

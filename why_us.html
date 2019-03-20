@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<!--[if lte IE 8]><html lang="en" class="no-js ie8"><![endif]-->
+<!--[if IE 9]><html lang="en" class="no-js ie9"><![endif]-->
+<!--[if !IE]>-->
+<html style="margin-top: 0!important;" lang="en-US">
+<!--<![endif]-->
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="Sherpur Industrial Park" />
+    <meta name="keywords" content="Sherpur, Industrial Park, Warehousing space" />
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet">
+    <link type="text/css" media="all" href="Assets/css/style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+<link rel="apple-touch-icon" sizes="76x76" href="/Assets/images/favicon/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/Assets/images/favicon/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/Assets/images/favicon/favicon-16x16.png">
+<link rel="manifest" href="/Assets/images/favicon/site.webmanifest">
+<link rel="mask-icon" href="/Assets/images/favicon/safari-pinned-tab.svg" color="#5bbad5">
+<link rel="shortcut icon" href="/Assets/images/favicon/favicon.ico">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="msapplication-config" content="/Assets/images/favicon/browserconfig.xml">
+<meta name="theme-color" content="#ffffff">
+    <title>Sherpur Industrial park</title>
+    
+    
+
+   <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-55JJ7S6');</script>
+<!-- End Google Tag Manager -->
+   
+       <script type='text/javascript' src='Assets/js/jquery.js'></script>
+    
+      <!-- Firebase App is always required and must be first -->
+    <script src="/__/firebase/5.5.9/firebase-app.js"></script>
+    <script src="/__/firebase/5.5.9/firebase-database.js"></script>
+    <script src="/__/firebase/init.js"></script>
+    
+    <style>
+        .bg{
+/*            background-position: right;*/
+            background-size: contain !important;
+        }
+    </style>
+    
+</head>
+
+<body data-menu="closed" data-delay="false" class="page-template page page-id-116 header-secondary">
+  
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-55JJ7S6"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+  
+  
+       <!-- Enquiry form -->
+    <div class="lightbox-wrapper" data-lightbox='closed'>
+        <div class="lightbox-cell">
+            <div class="lightbox-container">
+                <div class="lightbox-content">
+                    <div class="close"> <span></span> <span></span></div>
+                    <div id="hide">
+                    <h2>Hurry<br/><span class="light">Up</span></h2>
+                    <p> The road is getting wider by 30ft </p>
+                    <p>Book your Land now or else price will be rising soon</p>
+                    </div>
+                    <div>
+                        <div class="form-fields">
+                            <form class="form-container" id="eventform" onsubmit="event.preventDefault(); validateMyForm();">
+                                <div class="form-group">
+                                    <input type="text" id="Fname" name="billing_name" class="form-control" aria-required="true" placeholder="First Name*">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" name="billing_email" class="form-control" id="E_Email" aria-required="true" placeholder="Your Email*">
+                                </div>
+                                <div class="form-group">
+                                    <input type="tel" name="billing_tel" id="E_tele" class="form-control" aria-required="true" placeholder="Phone Number*">
+                                </div>
+                                <div class="form-group"> <i class="arrow-icon"></i>
+                                    <select name="amount" class="form-control select-box-lightbox" id="budget">
+                                        <option value="" disabled selected>Budget </option>
+                                        <option value="15 Lakhs">15 Lacs</option>
+                                        <option value="30-50 lakhs">30-50 Lakhs</option>
+                                        <option value="50-70 Lakhs">51-70 Lakhs</option>
+                                        <option value="71-90 Lakhs">71-99 Lakhs</option>
+                                        <option value="1-2 Cr">1-2 Cr</option>
+                                        <option value="2-3 Cr">2-3 Cr</option>
+                                        <option value="More than 3 Cr">More than 3 Cr</option>
+                                       
+                                    </select>
+                                </div>
+                                <div class="form-group" > 
+                                   <i class="arrow-icon"></i>
+                                    <select name="merchant_param1" class="form-control select-box-lightbox" id="products">
+                                        <option value="" disabled selected>Product*</option>
+                                        <option value="Industrial Land">Industrial Land</option>
+                                        <option value="Logistics Hub">Logistics Hub</option>
+                                        <option value="Warehouse">Warehouse</option>
+                                    </select>
+                                </div>
+                               
+                                <button class="button submit">Send</button>
+                            </form>
+                            <div class="thank_message" id="thank_msg">
+                                <h2>Thank you for requesting</h2>
+                                <p> we will reach you out shortly</p>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+   
+   <!-- Enquiry form closed -->
+   
+    <div class="nav table">
+        <div class="cell">
+            <div class="nav-button">
+                <div class="dot dot-1"></div>
+                <div class="dot dot-2"></div>
+                <div class="dot dot-3"></div>
+                <div class="dot dot-4"></div>
+                <div class="dot dot-5"></div>
+                <div class="dot dot-6"></div>
+                <div class="dot dot-7"></div>
+                <div class="dot dot-8"></div>
+                <div class="dot dot-9"></div>
+            </div>
+        </div>
+        <div class="cell">
+            <div class="lang-switcher"> 
+             <a class="open-lightbox">Enquiry</a>
+            </div>
+        </div>
+    </div>
+   <div class="menu-items-wrapper">
+        <ul>
+           <div class="menu-main-menu-container">
+                <ul id="menu-main-menu" class="menu">
+                    <li id="menu-item-178" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home  page-item-5 current_page_item menu-item-178"><a href="index.html">Home</a></li>
+                  
+                    <li id="menu-item-176" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-176"><a href="project_plan.html">Project Plan</a></li>
+                    <li id="menu-item-175" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-175"><a href="feature.html">Features</a></li>
+                    <li id="menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333 current-menu-item page_item"><a href="why_us.html">WHY SIP</a></li>
+                    <li id="menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333"><a href="whyBengal.html">Why Bengal</a></li>
+                     <li id="menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333"><a href="about.html">About us</a></li>
+                      <li id="menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333"><a href="locate.html"> Locate us</a></li>
+                       <li id="menu-item-333" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333"><a href="gallery.html">Gallery</a></li>
+                    <li id="menu-item-208" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-208"><a href="logistic.html">Logistic Hub </a></li>
+<!--                      <li id="menu-item-177" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-177"><a href="./warehousing.html">Warehousing & Logistics</a></li>-->
+                </ul>
+            </div>
+        </ul>
+    </div>
+    <section class="section-scrollbar" data-scrollbar>
+        <div id="header" class="container" style="background-image: url('./Assets/images/about.jpg');">
+            <div class="overlay-opacity"></div>
+            <h2>Why <br> <span class="light"> Sherpur </span></h2>
+            <div class="logo-container">
+                <div class="logo">
+                   <img src="Assets/images/logo%20samll%20(1).png" alt="logo" width="65px">
+                </div>
+            </div>
+        </div>
+        <div class="main-layout">
+            <div class="container">
+                <div class="tiles">
+                    <div class="tile">
+                        <div class="text">
+                            <div class="holder">
+                                <h2>Prime <br> <span class="light">Location </span></h2>
+                                <p>For any industry location is important but quick and efficient access to modern transportation is fundamental and cost efficient.
+                                <br>
+                                <br>
+                                Strategically located in Amta, Mouza : Serpur, which is in close proximity to the city of Kolkata, SIP offers you to benefit from an outstanding low-cost access to adjacent markets through road, railway, sea and airways thus easily connecting you to the adjacent states and counties.(Distance note, railway routes and bus routes).
+
+                                </p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="holder">
+                                <div class="image bg" data-parallax='0.3' style="background-image: url('./Assets/images/location.png');"></div>
+                            </div>
+                        </div>
+                    </div> 
+                       <div class="tile">
+                        <div class="text">
+                            <div class="holder">
+                                <h2>Power  <br> <span class="light"> Availability</span></h2>
+                                <p style="text-align:justify">-The industrial power feeders lines up to the Plot. The Park carries a network for power distribution to ensure reliable transmission of electricity to all the sites within the park as per the standards laid by West Bengal Electricity Board
+                                </p>
+                            </div>
+                        </div>
+                        <div class="media bg">
+                            <div class="holder">
+                                <div class="image bg" data-parallax='0.3' style="background-image: url('./Assets/images/electric02.jpg');"></div>
+                            </div>
+                        </div>
+                    </div>
+                <div class="tile">
+                        <div class="text">
+                            <div class="holder">
+                                <h2>Modern <br> <span class="light">Roads </span></h2>
+                                <p style="text-align:justify">Roads are designed to carry heavy and oversized cargo. Main roads are 35 Ft wide and inter-connected for movement with landscaped traffic medians, storm water drains, efficient visual elements, lighting and signage.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="holder">
+                                <div class="image bg" data-parallax='0.3' style="background-image: url('./Assets/images/why4.jpg');"></div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="tile">
+                        <div class="text">
+                            <div class="holder">
+                                <h2>Sewage  <br> <span class="light"> Treatment</span></h2>
+                                <p style="text-align:justify">A common sewage treatment facility with compliance to all the West bengal Pollution Control Board directives is developed within the park to service the sewage discharged by the occupants of the park
+                                </p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="holder">
+                                <div class="image bg" data-parallax='0.3' style="background-image: url('./Assets/images/drainage01.jpeg');"></div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="tile">
+                        <div class="text">
+                            <div class="holder">
+                                <h2>Ambience <br> <span class="light"> </span></h2>
+                                <p style="text-align:justify">Landscaped traffic medians, storm water drains, efficient visual elements, lighting and signage systems are provided to enable a clutter free and smooth movement of people and vehicles.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="holder">
+                                <div class="image bg" data-parallax='0.3' style="background-image: url('./Assets/images/about.jpg');"></div>
+                            </div>
+                        </div>
+                    </div>
+                      <div class="tile">
+                        <div class="text">
+                            <div class="holder">
+                                <h2>Water<br> <span class="light">Availability </span></h2>
+                                <p style="text-align:justify">Ground water which richly endows the site, will be pumped and stored in elevated and ground-level reservoirs. Running across 3048 metres, the Park’s water distribution network — designed for industrial use — will be supplied by Elevated Storage Reservoir (ESR) totaling to 250 KLD.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="holder">
+                                <div class="image bg" data-parallax='0.3' style="background-image: url('./Assets/images/water01.jpg');"></div>
+                            </div>
+                        </div>
+                    </div>
+                 
+                    
+                    <div class="tile">
+                        <div class="text">
+                            <div class="holder">
+                                <h2>  A PRO-BUSINESS <br> <span class="light">REGULATORY</span></h2>
+                                <p style="text-align:justify"> ENVIRONMENT WITH TAILORED SOLUTIONS: With the help of world class and experienced team of developers SIP provides you with
+.
+                                    <br>
+                                    <br>
+                                     1. 100% ownership to hassle free industrial environment and efficient business infrastructure<br><br>
+                                      2. Issuing of Panchayat NOC, Trade License, other required permits and Security facility<br><br>
+                                      3. Efficient employment through HR services<br><br>
+                                     4. Availability of mixed gender, skilled and cost efficient labor force.
+                                </p>
+                        
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="holder">
+                                <div class="image bg" data-parallax='0.3' style="background-image: url('./Assets/images/why2a.jpg');"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tile">
+                        <div class="text">
+                            <div class="holder">
+                                <h2>DIVERSE LAND  <br> <span class="light">SOLUTIONS</span></h2>
+                                <p>Availability of “built-to-suit” and serviced plots with flexible terms is a beneficial offer that we provide to our clients. The industrial plots will be connected to a highly efficient infrastructure in a phased approach. SIP offers the opportunity for investors to buy land and choose the right size of plot based on their investment strategy. Provisions to mutate, convert or enhance the size of the plot as per the client’s  industrial requirements are also available
+                                </p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="holder">
+                                <div class="image bg" data-parallax='0.3' style="background-image: url('./Assets/images/why3.jpg');"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tile">
+                        <div class="text">
+                            <div class="holder">
+                                <h2> A FULLY INTEGRATED<br> <span class="light">INDUSTRIAL ESTATE</span></h2>
+                                <p>Carefully crafted by our world-class planners and developers SIP is the perfect combination of tailored solutions to meet the many different demands and needs of the growing working population and industries.With the help of ease of access of adjacent markets by multi-modal transportation networks, cheaply and locally available skilled labor force and world-class working environment, we help to competitively reduce cost and boost efficiency of the industry. This leads to an industry-friendly and hassle-free environment helping you to reach your industrial growth
+                                     
+                                </p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="holder">
+                                <div class="image bg" data-parallax='0.3' style="background-image: url('./Assets/images/why4.jpg');"></div>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="tile">
+                        <div class="text">
+                            <div class="holder">
+                                <h2> SECURITY, FIRE-SAFETY &<br> <span class="light">POLLUTION CONTROL</span></h2>
+                                <p>SIP believes that an effective security and fire-safety system is necessary in providing an uninterrupted growth to your blooming industry. Thus, we provide a 24x7 security service with CCTV surveillance and in-house fire-safety and extinguisher setups.
+                                <br>
+                                <br>
+                                    Due to increasing global-warming and pollution our team is concerned about the environment which supports our industries and business activities. Thus with an environment-friendly approach we also provide pollution control services for the tenant industries to benefit from a pollution-free working environment. 
+                                     
+                                </p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="holder">
+                                <div class="image bg" data-parallax='0.3' style="background-image: url('./Assets/images/why5.jpg');"></div>
+                            </div>
+                        </div>
+                    </div>
+              
+                     <div class="tile">
+                        <div class="text">
+                            <div class="holder">
+                                <h2>Start Ups<br> <span class="light">Benefits</span></h2>
+                                <p>
+                                   An initiative of the Government of West Bengal, facilitates startups to access the various resources of the Startup Eco System available in the State. More importantly, Startup Bengal helps to foster an entrepreneurial culture in the State.  
+                                </p>
+                            </div>
+                        </div>
+                        <div class="media">
+                            <div class="holder">
+                                <div class="image bg" data-parallax='0.3' style="background-image: url('./Assets/images/why6.webp');"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+         <footer id="footer">
+            <div class="container">
+                <div class="holder">
+                    <div class="table">
+                        <div class="cell">
+                             <h4>Location</h4>
+                            <p>Amta Road, Uluberia - Amta Rd</p>
+                            <p> West Bengal 711401</p>
+                        </div>
+                        <div class="cell">
+                            <h4>Contact</h4> 
+                            <a href="tel:+9198364 62566">98364 62566 </a>
+                            <a href="mailto:info@sherpurinduspark.com">Info@sherpurinduspark.com </a>
+                            </div>
+                            
+                        <div class="cell">
+                            <h4>Links</h4> 
+                            <a href="why_us.html">• WHY SIP</a> 
+                            <a href="#">• Privacy Policy</a> 
+                            <a class="open-lightbox">• Enquiry</a>
+                            </div>
+                        <div class="cell">
+                            <h4>Newsletter</h4>
+                            <div class="newsletter-form">
+                                <div role="form" class="wpcf7" dir="ltr">
+                                    <div class="screen-reader-response"></div>
+                                    
+                                    <form id="Newsletter_form" onsubmit="event.preventDefault(); validateMyFormNewsLetter()";>
+    
+                                    
+                                            <input type="email" name="newsletter" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Your Email" id="email_news" /> 
+                                            
+                                            <p>
+                                                <button type="submit"><i class="fa fa-chevron-right" aria-hidden="true"></i>
+                                                </button>
+                                               
+                                        </p>
+                                        
+                                    </form>
+                                    <p class="News_ltr_msg" id="News_ltr_msg_thank"> 
+                                    Thank you, you'll receive an email soon
+                                   </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="holder">
+                    <div class="table">
+                        <div class="cell">
+                        </div>
+                        <div class="cell">
+                            <div class="copyright">&copy; 2018 SIP | All Rights Reserved | <span class="dxb"><a href="https://www.resto-g.com/" target=_blank>Made By Resto-G</a></span></div>
+                        </div>
+                        <div class="cell">
+                            <div class="social"> 
+                            <a href="https://www.facebook.com/Sherpur-Industrial-park-272919176695087/" rel="nofollow">
+                            <i class="fa fa-facebook" ></i>
+                            </a> 
+                            <a href="https://twitter.com/ParkIndus" rel="nofollow"><i class="fa fa-twitter" ></i>
+                            </a> 
+                            <a href="https://www.instagram.com/sherpurindus/" rel="nofollow"><i class="fa fa-instagram" ></i></a> 
+                            <a href="https://www.linkedin.com/company/sherpur-industrial-park" rel="nofollow">
+                            <i class="fa fa-linkedin" ></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </section>
+    
+    <script type="text/javascript" defer src="Assets/js/script.js"></script>
+     <script type="text/javascript" src="Assets/js/backend.js"></script>
+ </body>
+
+</html>

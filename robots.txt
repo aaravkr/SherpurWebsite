@@ -1,0 +1,10 @@
+User-Agent: *
+Disallow: 
+Allow: /index.html
+Allow: /project_plan.html
+Allow: /feature.html
+Allow: /why_us.html
+Allow: /whyBengal.html
+Allow: /about.html
+Allow: /locate.html
+Allow: /logistic.html
